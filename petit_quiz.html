@@ -39,7 +39,7 @@
             margin-top: 20px;
         }
     </style>
-</>
+</head>
 <body>
 
 <h1>Quiz interactif</h1>
@@ -50,26 +50,26 @@
         <button class="answer" onclick="checkAnswer('Novembre')">Novembre</button>
         <button class="answer" onclick="checkAnswer('Mai')">Mai</button>
         <button class="answer" onclick="checkAnswer('Septembre (wtf)')">Septembre (wtf)</button>
-        <button class="answer" onclick="checkAnswer('Juin')">Juin </button>
-    </div>
-
-    <div class="result" id="result">
-        <p id="result-text"></p>
-        <button onclick="resetQuiz()">Recommencer</button>
+        <button class="answer" onclick="checkAnswer('Juin (wtf)')">Juin (wtf)</button>
     </div>
 </div>
 
+<div class="result" id="result">
+    <p id="result-text"></p>
+    <button onclick="resetQuiz()">Recommencer</button>
+</div>
+
 <script>
-    let correctAnswer = "Juin";  // La bonne réponse est "Juin (wtf)"
+    let correctAnswer = "Juin (wtf)";  // La bonne réponse est "Juin (wtf)"
     let resultContainer = document.getElementById("result");
     let resultText = document.getElementById("result-text");
 
     function checkAnswer(answer) {
         // Comparaison stricte des réponses
         if (answer === correctAnswer) {
-            resultText.textContent = "Youhou ! Tu as trouvé la bonne réponse chacal.";
+            resultText.textContent = "Bravo ! Tu as trouvé la bonne réponse.";
         } else {
-            resultText.textContent = "Bah non, la bonne réponse est 'Juin' nobo.";
+            resultText.textContent = "Dommage, la bonne réponse est 'Juin (wtf)'.";
         }
         // Affichage des résultats
         resultContainer.style.display = "block";
