@@ -46,11 +46,11 @@
 
 <div id="quiz-container">
     <div class="question">
-        <p>Quel est le plus mois que victoire préfère ?</p>
+        <p>Quel est le mois que Victoire préfère ?</p>
         <button class="answer" onclick="checkAnswer('Novembre')">Novembre</button>
         <button class="answer" onclick="checkAnswer('Mai')">Mai</button>
         <button class="answer" onclick="checkAnswer('Septembre (wtf)')">Septembre (wtf)</button>
-        <button class="answer" onclick="checkAnswer('Juin')">Juin</button>
+        <button class="answer" onclick="checkAnswer('Juin (wtf)')">Juin (wtf)</button>
     </div>
 
     <div class="result" id="result">
@@ -60,21 +60,24 @@
 </div>
 
 <script>
-    let correctAnswer = "Juin";
+    let correctAnswer = "Juin (wtf)";  // La bonne réponse est "Juin (wtf)"
     let resultContainer = document.getElementById("result");
     let resultText = document.getElementById("result-text");
 
     function checkAnswer(answer) {
+        // Comparaison stricte des réponses
         if (answer === correctAnswer) {
             resultText.textContent = "Bravo ! Tu as trouvé la bonne réponse.";
         } else {
-            resultText.textContent = "Dommage, la bonne réponse est 'Juin'.";
+            resultText.textContent = "Dommage, la bonne réponse est 'Juin (wtf)'.";
         }
+        // Affichage des résultats
         resultContainer.style.display = "block";
         document.getElementById("quiz-container").style.display = "none";
     }
 
     function resetQuiz() {
+        // Réinitialisation du quiz
         document.getElementById("quiz-container").style.display = "block";
         resultContainer.style.display = "none";
     }
