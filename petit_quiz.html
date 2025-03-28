@@ -50,7 +50,7 @@
         <button class="answer" onclick="checkAnswer('Novembre')">Novembre</button>
         <button class="answer" onclick="checkAnswer('Mai')">Mai</button>
         <button class="answer" onclick="checkAnswer('Septembre (wtf)')">Septembre (wtf)</button>
-        <button class="answer" onclick="checkAnswer('Juin (wtf)')">Juin (wtf)</button>
+        <button class="answer" onclick="checkAnswer('Juin')">Juin</button>
     </div>
 </div>
 
@@ -60,16 +60,16 @@
 </div>
 
 <script>
-    let correctAnswer = "Juin (wtf)";  // La bonne réponse est "Juin (wtf)"
+    let correctAnswer = "Juin";  // La bonne réponse est "Juin (wtf)"
     let resultContainer = document.getElementById("result");
     let resultText = document.getElementById("result-text");
 
     function checkAnswer(answer) {
         // Comparaison stricte des réponses
         if (answer === correctAnswer) {
-            resultText.textContent = "Bravo ! Tu as trouvé la bonne réponse.";
+            resultText.textContent = "YOUHOUUU ! Tu as trouvé la bonne réponse, bravo chacal.";
         } else {
-            resultText.textContent = "Dommage, la bonne réponse est 'Juin (wtf)'.";
+            resultText.textContent = "Nobo, j'ai choisi 'Juin'.";
         }
         // Affichage des résultats
         resultContainer.style.display = "block";
